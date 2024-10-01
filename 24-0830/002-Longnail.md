@@ -6,7 +6,7 @@
 
 longnail技术——用CoreDSL来实现可移植的自定义RISC-V扩展的HLS
 
-> HLS：High-Level Synthesis 
+> HLS：High-Level Synthesis
 >
 > 一种技术，用于将高级描述的算法转换为硬件描述的电子设计；
 >
@@ -34,8 +34,15 @@ RISC-V在这方面的问题是这和微处理器架构相依赖，对于不熟�
 
 ## **阅读章节和子章节的标题**
 
+/xmind/002-Longnail.xmind
 
 ## **阅读总结**
+
+作者提供了CoreDSL——ADL，Longnail——HLS
+
+结合SCAIE-V，CoreDSL和Longnail能够让ISAX设计对于非硬件专家实现成为现实，并且可以在多个微架构之间实现可移植
+
+技术提供实现各种功能的ISAX
 
 ## **阅读引用**
 
@@ -43,4 +50,10 @@ RISC-V在这方面的问题是这和微处理器架构相依赖，对于不熟�
 
 ## **实践/理论？**
 
+实践
+
 ## **主要贡献？**
+
+CoreDSL
+
+Longnail
