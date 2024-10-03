@@ -48,15 +48,16 @@
 
 ## **阅读章节和子章节的标题**
 
+xmin/005-OverlappingISA.md
 
 ## **阅读总结**
 
+异构的好处是单线程性能高多线程吞吐量高。但是操作系统不支持异构。文章提出fault-and-migrate、faster-first scheduling、DWRR三种算法，并应用在linxu2.7.24上，实现了OS管理异构CPU
 
 ## **阅读引用**
 
 # **收获：**
 
 ## **实践/理论？**
-
 
 ## **主要贡献？**
