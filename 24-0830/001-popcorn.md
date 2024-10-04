@@ -29,3 +29,7 @@ Popcorn通过deplicated-kernel OS和compiler framework实现了在异构ISA处�
 ## **主要贡献？**
 
 提供了一个系统架构，这个系统架构由一个编译器框架和操作系统构成，这能使编写于同构ISA机器之间运行的程序能够在异构ISA机器上运行，并且程序可以分为不同的块，每个块会根据特性在最适合的ISA上运行
+
+# round2
+
+1.1-motivation
