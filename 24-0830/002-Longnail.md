@@ -4,7 +4,7 @@
 
 ### 题目
 
-longnail技术——用CoreDSL来实现可移植的自定义RISC-V扩展的HLS
+longnail技术——对用CoreDSL实现可移植的自定义RISC-V扩展进行HLS的一种技术
 
 > HLS：High-Level Synthesis
 >
