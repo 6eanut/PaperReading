@@ -56,11 +56,24 @@
 
 * threading -> distributed computation
   * std::thread
+  * 重写spawn。编译时捕获线程体作为闭包，并转发给运行时。运行时根据每个服务器的负载启动线程。
+  * ownership transfer会在子线程的创建和结束时发生
 * inter-thread channel -> communication
   * std::sync::mpsc
+  * 网络消息队列
 * reference-counted pointers -> ownership sharing
   * std::sync::Rc
   * std::sync::Arc
+  * 分别处理单线程和多线程中的reference counted
 * shared-state locks -> concurrency control
   * std::sync::Mutex
   * std::sync::atomic
+  * 在全局堆上分配真实值，并且只存储box pointer以原子类型
+
+这一款看的不是很明白，主要原因是rust线程部分，还没学
+
+## 3 Affinity Annotations
+
+开发者可以通过annotation提供数据语义，以此提高性能。这对于充分利用以指针查询方法访问面向对象的数据结构的数据中心应用很有用。
+
+memcached是有一个链表，然后访问的时候需要对指针解引用以及查询，很麻烦。如果说能把这些指针都放在一个机器上，那么效果会好很多。
