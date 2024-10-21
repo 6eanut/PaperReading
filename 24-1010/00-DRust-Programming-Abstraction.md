@@ -46,3 +46,21 @@
   * consistency model
     * 每有一个写操作，其后续的读操作得能看到更新后的值
   * optimizing for local writes
+    * 如果写操作完成，会让颜色值加1；如果颜色值移除，会把object重新写到一个地方，然后让颜色值归零
+    * 如果是读操作，就会看看颜色值变了没，变了的话就说明值被改了；否则直接读
+  * writing unsafe code in drust
+    * 支持unsafe
+    * 提供dalloc dread dwrite 管理全局dsm堆上的数据
+
+## 2 Adapting Rust Standard Libraries
+
+* threading -> distributed computation
+  * std::thread
+* inter-thread channel -> communication
+  * std::sync::mpsc
+* reference-counted pointers -> ownership sharing
+  * std::sync::Rc
+  * std::sync::Arc
+* shared-state locks -> concurrency control
+  * std::sync::Mutex
+  * std::sync::atomic
