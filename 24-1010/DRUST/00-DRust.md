@@ -118,10 +118,16 @@ drust runtime system分为communication layer， heap manager， thread schedule
 
 ## **阅读总结**
 
+这个文章提出了一个基于ownership model的DSM——DRust。它通过轻量的以语言语义引导的一致性协议来让一个运行在单机的rust程序跑在分布式环境上。DRust比现有的dsm表现好，说明这种以语言引导的dsm能够实现内存一致性、透明性和高效性
+
 ## **阅读引用**
 
 # **收获：**
 
 ## **实践/理论？**
 
+实践 大实践
+
 ## **主要贡献？**
+
+drust
