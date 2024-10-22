@@ -77,3 +77,9 @@
 开发者可以通过annotation提供数据语义，以此提高性能。这对于充分利用以指针查询方法访问面向对象的数据结构的数据中心应用很有用。
 
 memcached是有一个链表，然后访问的时候需要对指针解引用以及查询，很麻烦。如果说能把这些指针都放在一个机器上，那么效果会好很多。
+
+* data-affinity pointer
+  * 实现了一个指针TBox，跟Box类似。如果引用的是heap上的数据，那就要随着object移动而移动；如果是stack上的数据，那就不变。
+  * 举了一个linked list的例子，说明tbox比box好，但是我没看出来哪点好
+* data-affinity thread
+  * 实现了一个spawn_to，比spawn多了一个box指针作为参数
